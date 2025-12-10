@@ -14,7 +14,7 @@ export default function Cart() {
 		userProgressCtx.hideCart();
 	}
 	return (
-		<Modal className="cart">
+		<Modal className="cart" open={userProgressCtx.progress === "cart"}>
 			<h2>Your Cart</h2>
 			<ul>
 				{cartCtx.items.map((item) => (
@@ -23,9 +23,7 @@ export default function Cart() {
 					</li>
 				))}
 			</ul>
-			<p className="cart-total" open={userProgressCtx.progress === "cart"}>
-				${cartTotal}
-			</p>
+			<p className="cart-total">${cartTotal}</p>
 			<p className="modal-actions">
 				<Button textOnly onClick={handleCloseCart}>
 					Close
