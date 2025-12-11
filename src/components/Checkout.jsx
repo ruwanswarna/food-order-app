@@ -26,7 +26,9 @@ export default function Checkout() {
 				order: { items: cartCtx.items, customer: customerData },
 			}),
 		});
-        if(response.status==="500")
+        if(response.status==="500"){
+            
+        }
 	}
 
 	function handleClose() {
